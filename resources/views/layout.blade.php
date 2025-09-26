@@ -18,7 +18,7 @@
             </a>
             <div class="space-x-6">
                 <a href="{{ url('/penjualan') }}" class="hover:text-blue-600">Penjualan</a>
-                <a href="{{ url('/master-toko') }}" class="hover:text-blue-600">Master Toko</a>
+                <a href="{{ url('/kode-toko') }}" class="hover:text-blue-600">Master Kode Toko</a>
                 <a href="{{ url('/master-sales') }}" class="hover:text-red-600">Master Sales</a>
                 <a href="{{ url('/area-sales') }}" class="hover:text-red-600">Master Area Sales</a>
             </div>

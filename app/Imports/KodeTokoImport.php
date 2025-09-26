@@ -14,8 +14,13 @@ class KodeTokoImport implements ToModel
     */
     public function model(array $row)
     {
+        if ($row[0] === 'kode_toko_baru') {
+            return null;
+        }
+
         return new KodeTokoModel([
-            //
+            'kode_toko_baru'   => $row[0],
+            'kode_toko_lama'   => $row[1],
         ]);
     }
 }

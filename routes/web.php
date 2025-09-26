@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AreaSalesController;
+use App\Http\Controllers\KodeTokoController;
 use App\Http\Controllers\MasterSalesController;
 use App\Http\Controllers\PenjualanController;
 use Illuminate\Support\Facades\Route;
@@ -37,4 +38,15 @@ Route::get('/master-sales/{id}/edit', [MasterSalesController::class, 'edit'])->n
 Route::put('/master-sales/{id}/update', [MasterSalesController::class, 'update'])->name('master-sales.update');
 Route::delete('/master-sales/{id}/destroy', [MasterSalesController::class, 'destroy'])->name('master-sales.destroy');
 Route::post('/master-sales/import', [MasterSalesController::class, 'import'])->name('master-sales.import');
+
+Route::get('/kode-toko', [KodeTokoController::class, 'index'])->name('kode-toko.index');
+Route::get('/kode-toko/create', [KodeTokoController::class, 'create'])->name('kode-toko.create');
+Route::get('/kode-toko/export-excel', [KodeTokoController::class, 'exportExcel'])->name('kode-toko.export-excel');
+Route::get('/kode-toko/export-pdf', [KodeTokoController::class, 'exportPdf'])->name('kode-toko.export-pdf');
+Route::get('/kode-toko/{id}', [KodeTokoController::class, 'show'])->name('kode-toko.show');
+Route::post('/kode-toko/store', [KodeTokoController::class, 'store'])->name('kode-toko.store');
+Route::get('/kode-toko/{id}/edit', [KodeTokoController::class, 'edit'])->name('kode-toko.edit');
+Route::put('/kode-toko/{id}/update', [KodeTokoController::class, 'update'])->name('kode-toko.update');
+Route::delete('/kode-toko/{id}/destroy', [KodeTokoController::class, 'destroy'])->name('kode-toko.destroy');
+Route::post('/kode-toko/import', [KodeTokoController::class, 'import'])->name('kode-toko.import');
 
